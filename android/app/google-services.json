@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "792979278445",
+    "project_id": "fikirverse-425a9",
+    "storage_bucket": "fikirverse-425a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792979278445:android:cff01dea53a88dc7d00d64",
+        "android_client_info": {
+          "package_name": "com.dymu.fikir_verse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "792979278445-shmesb55na29st5hb7d2gobi1mn3v7v7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvyVNhHylgpF1hco494Q_qfy2XX3D9D0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "792979278445-shmesb55na29st5hb7d2gobi1mn3v7v7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "792979278445-5stjofea62krhfu54sdokj6ep2k8tvfn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fikirverse.fikirverse"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
