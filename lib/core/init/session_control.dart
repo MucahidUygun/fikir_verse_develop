@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:fikir_verse/core/model/survey_model.dart';
 import 'package:fikir_verse/core/model/uptade_user_profile_model.dart';
+import 'package:fikir_verse/core/services/post_token.dart';
 import 'package:fikir_verse/core/services/survey_services.dart';
 import 'package:fikir_verse/core/services/uptade_user_profile_services.dart';
 import 'package:fikir_verse/core/widget/toast_message.dart';
@@ -12,8 +13,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> sessionControl(bool? _controlType, BuildContext context) async {
   await checkNetworkControl(context);
-  //1: Login olmuş bir kullanıcının kontrolü
-  //0: Login olmamış bir kullanıcının kontrolü
+  // *1: Login olmuş bir kullanıcının kontrolü
+  // ?0: Login olmamış bir kullanıcının kontrolü
   var session = await SharedPreferences.getInstance();
   String? userId = session.getString('userId');
   if (_controlType == true) {

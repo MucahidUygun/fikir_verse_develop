@@ -7,11 +7,7 @@ import 'page/splash/splash_view.dart';
 
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  // If you're going to use other Firebase services in the background, such as Firestore,
-  // make sure you call `initializeApp` before using other Firebase services.
   await Firebase.initializeApp();
-
-  print("Handling a background message: ${message.messageId}");
 }
 
 
@@ -20,28 +16,19 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform
+    options: DefaultFirebaseOptions.currentPlatform,
   );
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   FirebaseMessaging messaging = FirebaseMessaging.instance;
-  NotificationSettings settings = await messaging.requestPermission(
+  await messaging.requestPermission(
     alert: true,
     announcement: false,
     badge: true,
     carPlay: false,
     criticalAlert: false,
     provisional: false,
-    sound: true
+    sound: true,
   );
-  FirebaseMessaging.onMessage.listen((RemoteMessage message) { 
-    print("Got a message foregasda");
-    print("mesaj:${message.data}");
-
-    if (message.notification !=null) {
-      print('Message also contained a notification: ${message.data}');
-    }
-
-  });
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,

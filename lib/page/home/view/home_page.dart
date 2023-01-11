@@ -1,3 +1,4 @@
+import 'package:fikir_verse/core/init/get_token_func.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
@@ -24,9 +25,7 @@ class _HomePageState extends State<HomePage> {
   final HomePageViewModel _viewModel = HomePageViewModel();
   @override
   initState() {
-    /*FirebaseMessaging.instance
-        .getToken()
-        .then((newToken) => {print('Token:$newToken')});*/
+    postToken();
     sessionControl(true, context);
     _viewModel.getUserModel();
     super.initState();
